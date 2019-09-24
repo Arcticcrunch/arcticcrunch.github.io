@@ -101,7 +101,8 @@
 
 .GitHubButton
 {
-    background: url("Hub logo.png");
+    /* background: url("Hub logo.png"); */
+    background: url("Twitter logo.png");
     background-size: 100%;
 }
 
