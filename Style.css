@@ -5,7 +5,7 @@
     background-color: rgb(25, 28, 34);
     background-image: url("Site bg.png");
     background-repeat: no-repeat;
-    /* min-width: 1280px; */
+    min-width: 1280px;
 }
 
 .MainFontColor
@@ -101,7 +101,7 @@
 
 .GitHubButton
 {
-    background: url("GitHub logo.png");
+    background: url("Github logo.png");
     background-size: 100%;
 }
 
