@@ -1,85 +1,115 @@
+<?php
+    require "FunctionLibrary.php";
+
+    function PlaceTestText()
+    {
+        return file_get_contents("Text/FillerArticle.txt");
+    }
+
+
+?>
+
+
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="Style.css" >
-    <script src="Scripts.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf8">
+    <meta name="viewport", content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Потрясающе крутой сайт</title>
-    <style>
-        p{
-            text-indent: 20px;
-        }
-    </style>
+    <script src="Scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="Styles.css" >
+    <title>
+        Клининговая фирма №1
+    </title>
 </head>
-<body class = "Background" style="margin: 0%">
-    <header class = "Header">
-        <h1 class = "HeaderText MainFontColor">
-            Заголовок сайта
-        </h1>
-        <div class = "SocialPanel">
-                <button class = "SocialNetworkButton GitHubButton" 
-                    onclick='location.href="https://github.com/Arcticcrunch/arcticcrunch.github.io"'
-                    title="GitHub репозиторий этого сайта">
-                    <!-- Гит хаб -->
-                </button>
-                <button class = "SocialNetworkButton VKontakteButton"
-                    onclick='location.href="https://vk.com/nikolol"'
-                    title="Создатель этого сайта :)">
-                    <!-- ВКонтакте -->
-                </button>
-                <button class = "SocialNetworkButton FacebookButton" onclick="NotImplemented();">
-                    <!-- Фейсбук -->
-                </button>
-                <button class = "SocialNetworkButton YouTubeButton" onclick="NotImplemented();">
-                    <!-- Ютуб -->
-                </button>
-                <button class = "SocialNetworkButton TwitterButton" onclick="NotImplemented();">
-                    <!-- Твитер -->
-                </button>
-            </div>
-    </header>
 
-    <main class = "MainContent MainFontColor" title="Невероятно крутое описание чего то...">
-        <div>
-            <p>
-                Здесь располагается основной контент страницы.
-            </p>
-        </div>
-    </main>
-
-    <div class = "LeftPanel">
-        <button class = "MenuButton MainFontColor" onclick="location.href='/index.html'">
-            На главную
-        </button>
-        <button class = "MenuButton MainFontColor" onclick="NotImplemented();">
-            Информация
-        </button>
-        <button class = "MenuButton MainFontColor" onclick="NotImplemented();">
-            Файлы
-        </button>
-        <button class = "MenuButton MainFontColor" onclick="NotImplemented();">
-            Галерея
-        </button>
-        <button class = "MenuButton MainFontColor" onclick="NotImplemented();">
-            Видео
-
-        </script>
-
-        </button>
-
+<body class = "MainPageBackground">
+    <div class = "HeaderPanel">
+        <header class = "HeaderTittle">
+            Лучшая клининговая фирма
+        </header>
     </div>
 
-
-
-    <footer class = "FooterPanel">
-        <button class = "FooterUpButton" onclick="ScrollToTop();">
-            <!-- Вверх -->
-        </button>
-        <div class = "CopyrightInfo MainFontColor">
-            Крютченко Никита © 2019
+    <main class = "Body">
+        <!--Основное наполнение сайта:<br><br>-->
+        <div class = "IntroLogo">
+            
         </div>
+
+        <div class = "BuyButtonPanel">
+            <button class = "BuyButton" onclick="NotImplemented();">
+                Заказать сейчас!
+            </button>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class = "CostCalculatorPanel">
+            <div class = "CostCalculatorHeader">
+                Калькулятор стоимости
+            </div>
+            <input type="range" min="1" max="100" value="1" class="CostSlider" id="costSlider">
+        </div>
+
+
+        <!--<?=PlaceTestText()?>-->
+    </main>
+
+    <footer class = "Footer">
+        123
     </footer>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var offset = $('#floatingButton').offset();
+            var topPadding = 0;
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > offset.top) {
+                    $('#floatingButton').stop().animate({marginTop: $(window).scrollTop() - offset.top + topPadding});
+                }
+                else {
+                    $('#floatingButton').stop().animate({marginTop: 0});
+                }
+            });
+        });
+    </script>
 </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<body style="padding-left: 20px; padding-right: 20px;">
+    <h1>
+        Список статей:
+    </h1>
+    <div style="font-size: 17px;">
+    -->
+        <?php for ($i=0; $i < count($allArticles); $i++) : ?> 
+            <a href="article.php?name=<?= $allArticles[$i]["name"]?>">
+                <?=$allArticles[$i]["header"] ?> <br>
+            </a>
+        <?php endfor ?>
+        <!--
+    </div>
+</body>
+-->
+
+
 </html>
