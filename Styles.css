@@ -21,11 +21,75 @@
 
 .HeaderTittle
 {
+    /* background-color: aqua; */
     padding-top: 26px;
     text-align: center;
     font-size: 55px;
 }
 
+.SocialPanel
+{
+    /* background-color: rgb(51, 15, 15); */
+    margin-top: -51px;
+    margin-right: 130px;
+    margin-left: auto;
+    width: 300px;
+}
+
+.SocialButton
+{
+    /* background-color: rgba(0,0,0,.5); */
+    /* filter: grayscale(100); */
+    filter: hue-rotate(33deg);
+    /* display: inline; */
+    content: "";
+    width: 40px;
+    height: 40px;
+    margin: 6px;
+    outline: none;
+    border-style: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.SocialButton:hover
+{
+    transform: scale(1.4);
+    /* box-shadow: 0 0 10px 0 rgba(0,0,0,0.5); */
+    transition: 0.3s;
+}
+.SocialButton:active
+{
+    transform: scale(1.2);
+    transition: 0.1s;
+    filter: brightness(140%);
+}
+
+
+.VKontakteButton
+{
+    background: url("Images/Buttons/VK logo.png");
+    background-size: 100%;
+}
+.YouTubeButton
+{
+    background: url("Images/Buttons/Youtube logo.png");
+    background-size: 100%;
+}
+.TwitterButton
+{
+    background: url("Images/Buttons/Twitter logo.png");
+    background-size: 100%;
+}
+.GitHubButton
+{
+    background: url("Images/Buttons/Github logo.png");
+    background-size: 100%;
+}
+.FacebookButton
+{
+    background: url("Images/Buttons/Facebook logo.png");
+    background-size: 100%;
+}
 
 
 
@@ -35,7 +99,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 63%;
-    height: 2350px;
+    min-height: 2800px;
     font-size: 20px;
 }
 
@@ -71,6 +135,7 @@
     text-shadow: none;
     text-align: center;
     font-size: 30px;
+    cursor: pointer;
     border-radius: 11px;
     height: 100%;
     width: 100%;
@@ -106,20 +171,29 @@
 {
     position: sticky;
     top: 1.2%;
-    margin-top: 30px;
+    margin-top: 25px;
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
-    width: 230px;
-    height: 105px;
+    width: 235px;
+    height: 100px;
 }
 
 
 .CostCalculatorPanel
 {
     background-color: seagreen;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
     width: 60%;
-    height: 700px;
+    min-height: 700px;
+}
+
+.CostCalculatorServiceText
+{
+    padding-left: 30px;
+    font-size: larger;
 }
 
 .CostCalculatorHeader
@@ -130,8 +204,10 @@
     margin-bottom: 20px;
 }
 
+
 .CostSlider {
     opacity: 1;
+    
 }
 .CostSlider:hover {
     opacity: 1;
@@ -158,4 +234,12 @@
 {
     height: 125px;
     background-color: rgb(200, 80, 130);
+}
+
+.Creator
+{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 55px;
 }

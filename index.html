@@ -28,6 +28,36 @@
         <header class = "HeaderTittle">
             Лучшая клининговая фирма
         </header>
+
+        <!--Панель с кнопками соц сетей-->
+        <div class = "SocialPanel">
+            <!-- ВКонтакте -->
+            <button class = "SocialButton VKontakteButton"
+                onclick='location.href="https://vk.com/nikolol"'
+                title="Создатель этого сайта :)">
+            </button>
+            <!-- Facebook -->
+            <button class = "SocialButton FacebookButton"
+                onclick="NotImplemented();"
+                title="Мы в Facebook :)">
+            </button>
+            <!-- YouTube -->
+            <button class = "SocialButton YouTubeButton"
+                onclick="NotImplemented();"
+                title="Мы на YouTube :O">
+            </button>
+            <!-- Twitter -->
+            <button class = "SocialButton TwitterButton"
+                onclick="NotImplemented();"
+                title="Мы в Twitter ;)">
+            </button>
+            <!-- GitHub -->
+            <button class = "SocialButton GitHubButton"
+                onclick='location.href="https://github.com/Arcticcrunch/arcticcrunch.github.io"'
+                title="Репозиторий данного сайта на GitHub">
+            </button>
+     
+        </div>
     </div>
 
     <main class = "Body">
@@ -46,27 +76,55 @@
         <br>
         <br>
         <br>
-
+        
+        <!--Панель калькулятора стоимости-->
         <div class = "CostCalculatorPanel">
             <div class = "CostCalculatorHeader">
                 Калькулятор стоимости
             </div>
+            <div class = "CostCalculatorServiceText">
+                Услуга 1 (80 грн/М2)
+            </div>
+            <div>
+                <input type="range" min="1" max="100" value="1" class="CostSlider" id="costSlider1">
+            </div>
+            <div class = "CostCalculatorServiceText">
+                Услуга 2 (160 грн/М)
+            </div>
+            <div>
+                <input type="range" min="1" max="100" value="1" class="CostSlider" id="costSlider2">
+            </div>
+            <div class = "CostCalculatorServiceText">
+                Услуга 3 (200 грн/М2)
+            </div>
+            <div>
+                <input type="range" min="1" max="100" value="1" class="CostSlider" id="costSlider3">
+            </div>
+            <div class = "CostCalculatorServiceText">
+                Услуга 4 (60 грн/М)
+            </div>
+            <div>
+                <input type="range" min="1" max="100" value="1" class="CostSlider" id="costSlider4">
+            </div>
+            <div class = "CostCalculatorServiceText">
+                Услуга 5 (150 грн/М)
+            </div>
+            <div>
+                <input type="range" min="1" max="100" value="1" class="CostSlider" id="costSlider5">
+            </div>
 
-            <input type="range" min="1" max="100" value="1" class="CostSlider" id="costSlider">
-            <input type="range" min="1" max="100" value="1" class="CostSlider" id="costSlider">
-            <input type="range" min="1" max="100" value="1" class="CostSlider" id="costSlider">
-            <input type="range" min="1" max="100" value="1" class="CostSlider" id="costSlider">
-            <input type="range" min="1" max="100" value="1" class="CostSlider" id="costSlider">
+            <?= GenerateSliders();?>
+
         </div>
 
 
-        <!--<?=PlaceTestText()?>-->
     </main>
 
     <footer class = "Footer">
-        123
+        <div class = "Creator">Крютченко "Johnta" Никита 2020(c)</div>
     </footer>
 
+    <!--
     <script type="text/javascript">
         $(document).ready(function () {
             var offset = $('#floatingButton').offset();
@@ -81,6 +139,7 @@
             });
         });
     </script>
+    -->
 </body>
 
 
@@ -107,9 +166,11 @@
     <div style="font-size: 17px;">
     -->
         <?php for ($i=0; $i < count($allArticles); $i++) : ?> 
+        <!--
             <a href="article.php?name=<?= $allArticles[$i]["name"]?>">
                 <?=$allArticles[$i]["header"] ?> <br>
             </a>
+            -->
         <?php endfor ?>
         <!--
     </div>
