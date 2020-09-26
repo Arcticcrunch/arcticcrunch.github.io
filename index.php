@@ -6,6 +6,7 @@
         return file_get_contents("Text/FillerArticle.txt");
     }
 
+
 ?>
 
 
@@ -22,11 +23,14 @@
     </title>
 </head>
 
-<body class = "MainPageBackground">
+<body class = "MainPageBackground MainColorOne">
     <div class = "HeaderPanel">
-        <header class = "HeaderTittle">
-            Лучшая клининговая фирма
-        </header>
+        <!--Заголовок сайта-->
+        <div class = "HeaderTittle">
+            <header>
+                Лучшая клининговая фирма
+            </header>
+        </div>
 
         <!--Панель с кнопками соц сетей-->
         <div class = "SocialPanel">
@@ -55,11 +59,33 @@
                 onclick='location.href="https://github.com/Arcticcrunch/arcticcrunch.github.io"'
                 title="Репозиторий данного сайта на GitHub">
             </button>
-     
+
         </div>
+
+        <div class = "NavigationPanel">
+            <button class = "NavigationButton ActiveButtonColor">
+                Кнопка 1
+            </button>
+            <button class = "NavigationButton">
+                Кнопка 2
+            </button>
+            <button class = "NavigationButton">
+                Кнопка 3
+            </button>
+            <button class = "NavigationButton">
+                Кнопка 4
+            </button>
+            <button class = "NavigationButton">
+                Кнопка 5
+            </button>
+            <button class = "NavigationButton">
+                Кнопка 6
+            </button>
+        </div>
+
     </div>
 
-    <main class = "Body">
+    <main class = "Main">
         <!--Основное наполнение сайта:<br><br>-->
         <div class = "IntroLogo">
             
@@ -71,7 +97,28 @@
             </button>
         </div>
 
+        <div class = "BenefitsPanel">
+            <div class = "BenefitsPanelTitleText">
+                Почему вам нужно выбрать нас?..
+            </div>
+
+            <div class = "BenefitPanelTable">
+                <div class = "BenefitPanelBlock">
+                    <img class = "BenefitImage" src="Images/empty.jpg">
+                    <div class = "BenefitBlockText" >Причина 1</div>
+                </div>
+                <div class = "BenefitPanelBlock">
+                    <img class = "BenefitImage" src="Images/empty.jpg">
+                    <div class = "BenefitBlockText" >Причина 2</div>
+                </div>
+                <div class = "BenefitPanelBlock">
+                    <img class = "BenefitImage" src="Images/empty.jpg">
+                    <div class = "BenefitBlockText" >Причина 3</div>
+                </div>
+            </div>
+        </div>
         <br>
+        <hr>
         <br>
         <br>
         <br>
@@ -113,23 +160,7 @@
             </div>
 
             <?= GenerateSliders();?>
-            <?php
-                $class = "CostCalculatorServiceText";
-                $costSliderClass = "CostSlider";
-                $serviceName = "Услуга X";
-                $slidersCount = 6;
-        
-                $result = "";
-        
-                for ($i=0; $i < $slidersCount; $i++)
-                { 
-                    $result .= "<div class=\"". $class. "\">". $serviceName. "</div>";
-                    $result .= "<div><input type=\"range\" min=\"1\" max=\"100\" value=\"1\" class=\"". $costSliderClass. "\"></div>";
-                }
-        
-                echo $result;
-            ?>
-            Hello World!
+
         </div>
 
 
