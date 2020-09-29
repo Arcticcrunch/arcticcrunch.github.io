@@ -1,10 +1,61 @@
-/*Основные цвета*/
-.MainColorOne
+/*---------------------------------------------------- Основные шаблоны -----------------------------------------------*/
+/*---------------Основные цвета--------------*/
+.MainColorBG
 {
     background-color: rgb(3, 169, 244);
 }
+.MainColorFG
+{
+    color: rgb(3, 169, 244);
+}
+.SecondaryColorFG
+{
+    color: white;
+}
 
-.MainPageBackground
+/* .ActiveButtonColor
+{
+    color: white;
+    background-color: rgb(64, 221, 49);
+} */
+.ActiveColorBG
+{
+    background-color: rgb(64, 221, 49);
+}
+
+/*---------------Форматирование элементов--------------*/
+
+/* Рабочая ширина элементов (63% по дефолту от ширины) */
+.MainPanelsWidth
+{
+    width: 63%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Тень панелей */
+.PanelsShadow
+{
+    box-shadow: 0 0 11px rgba(0,0,0,0.5);
+}
+/* Стильрамок панелей */
+.PanelsBorderStyle
+{
+    outline: none;
+    border: 0px;
+    border-radius: 11px;
+}
+
+
+
+
+
+
+
+
+
+
+.MainPageBorder
 {
     margin: 0;
     padding: 0;
@@ -17,11 +68,12 @@
     /* width: 100%; */
     margin: 0;
     padding: 0;
-    height: 140px;
+    padding-top: 5px;
+    height: 145px;
     position: relative;
     background-color: rgba(250, 255, 255, 1);
     color: rgb(3, 169, 244);
-    box-shadow: 0 0 11px rgba(0,0,0,0.5);
+    margin-bottom: 0px;
     /*min-width: 1280px;*/
 }
 
@@ -29,7 +81,7 @@
 {
     /* background-color: olive; */
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 18px;
     text-align: center;
     font-size: 54px;
 }
@@ -106,7 +158,6 @@
 }
 .NavigationButton
 {
-    color: rgb(3, 169, 244);
     width: 160px;
     height: 45px;
     display:inline-block;
@@ -114,7 +165,7 @@
     cursor: pointer;
     outline: none;
     border: none;
-    background-color: rgb(226, 226, 226);
+    /* background-color: rgb(226, 226, 226); */
     translate: 0.3s;
 }
 .NavigationButton:hover 
@@ -124,12 +175,44 @@
     /* transform: scale(1.4); */
     transition: 0.32s;
 }
-.ActiveButtonColor
-{
-    color: white;
-    background-color: rgb(64, 221, 49);
-}
 
+
+
+.MainLogoPanel
+{
+    margin-top: -135px;
+    margin-bottom: 0px;
+    margin-left: 100px;
+    width: 240px;
+    height: 130px;
+    background-color: steelblue;
+    color: black;
+}
+.MainLogoImagePanel
+{
+    text-align: center;
+    background-color: slategrey;
+}
+.MainLogoButton
+{
+    background-color: chartreuse;
+    width: 100%;
+    height: 100%;
+}
+.MainLogoImage
+{
+    width: 95px;
+    height: 95px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.MainLogoText
+{
+    text-align: center;
+    background-color: tan;
+    color: black;
+    font-size: 20px;
+}
 
 
 
@@ -137,46 +220,84 @@
 {
     margin-left: auto;
     margin-right: auto;
-    width: 63%;
-    min-height: 2800px;
+    /* width: 63%; */
+    min-height: 3000px;
     font-size: 20px;
 }
-
-.IntroLogo
+.MainPageBackgrond
 {
-    background-color: salmon;
-    margin-top: 55px;
-    margin-bottom: 10px;
-    height: 600px;
+    /* background-color: chocolate; */
+    text-align: center;
+
+    margin-top: 0%;
+    /* margin-bottom: calc(0 - height); */
+    margin-bottom: -820px;
+    padding-top: 0%;
+    overflow: hidden;
+    margin-right: 0px;
+    margin-left: 0px;
+    height: 840px;
+    
 }
 
+.MainPageBackgroundPicrue
+{
+    /* background-color: rgba(250, 128, 114, 0.267); */
+    overflow: hidden;
+    text-align: center;
+    align-content: center;
+    /* background-image: url("Images/Backgrounds/Main page wallpaper.jpg"); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.089), rgba(0, 0, 0, 0.5)), url("Images/Backgrounds/Main page wallpaper.jpg");
+    background-position: center;
+    background-size: cover;
+    transform-origin: center;
+    /* margin-top: 55px; */
+    /* margin-bottom: 10px; */
+    /* height: 300px; */
+    height: 100%;
+    
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* translate: 2s; */
+    animation: MainPageBackgroundZoomAnimation 33s ease-in-out infinite both;
+}
 
-.CostSlider {
-    -webkit-appearance: none;
+.IntroPanel
+{
     margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 40px;
-    width: 100%;
-    height: 40px;
-    background: rgb(226, 210, 223);
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    background-color: rgba(100, 148, 237, 0.623);
+    height: 590px;
+    align-self: center;
+
 }
+.IntroPanelLogoPanel
+{
+    background-color: rgba(241, 55, 64, 0.623);
+    margin-left: 30px;
+    /* margin-top: 30px; */
+    padding-top: 50px;
+    width: 460px;
+    height: 460px;
+}
+.IntroPanelLogo
+{
+    width: 100%;
+    height: 100%;
+}
+
+
 
 .BuyButton
 {
     background-color: rgb(255, 255, 255);
     color: rgb(3, 169, 244);
-    box-shadow: 0 0 11px rgba(0,0,0,0.5);
-    outline: none;
-    border: 0px;
     text-shadow: none;
     text-align: center;
     font-size: 30px;
     cursor: pointer;
-    border-radius: 11px;
     height: 100%;
     width: 100%;
     transition: 0.32s;
@@ -212,7 +333,7 @@
     position: sticky;
     top: 1.2%;
     margin-top: 25px;
-    margin-bottom: 30px;
+    /* margin-bottom: 200px; */
     margin-left: auto;
     margin-right: auto;
     width: 235px;
@@ -223,12 +344,12 @@
 .BenefitsPanel
 {
     background-color: sandybrown;
+    /* margin-top: 50px; */
     padding-bottom: 50px;
-    margin-top: 10px;
 }
 .BenefitsPanelTitleText
 {
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
     padding-top: 25px;
     padding-bottom: 25px;
     text-align: center;
@@ -263,8 +384,49 @@
 {
     font-size: 35px;
 }
+.BenefitsPanelBackground
+{
+    margin-top: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    /* min-width: 200px; */
+}
+
+.ServiceTypesPanel
+{
+    background-color: blue;
+    margin-bottom: 50px;
+    height: 600px;
+}
+.ServiceTypesHeader
+{
+    text-align: center;
+    padding-top: 38px;
+    font-size: 40px;
+}
+
+.AboutInfoPanel
+{
+    background-color: rgb(22, 156, 127);
+    margin-top: 80px;
+    margin-bottom: 350px;
+    height: 500px;
+}
 
 
+.CostSlider {
+    -webkit-appearance: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 40px;
+    width: 100%;
+    height: 40px;
+    background: rgb(226, 210, 223);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
 .CostCalculatorPanel
 {
     background-color: seagreen;
@@ -272,7 +434,7 @@
     padding-left: 20px;
     padding-bottom: 20px;
     width: 60%;
-    min-height: 700px;
+    min-height: 50px;
 }
 
 .CostCalculatorServiceText
@@ -315,6 +477,12 @@
     cursor: pointer;
 }
 
+
+
+
+
+
+
 .Footer
 {
     height: 125px;
@@ -328,3 +496,28 @@
     text-align: center;
     padding-top: 55px;
 }
+
+
+
+
+
+@keyframes MainPageBackgroundZoomAnimation {
+    0% {
+        /* margin-left: 0%;
+        margin-right: 0%; */
+        background-size: 100%;
+        /* transform: scale(1); */
+    }
+    50% {
+        /* margin-left: -20%;
+        margin-right: -20%; */
+        background-size: 120%;
+        /* transform: scale(1.2); */
+    }
+    100% {
+        /* margin-left: 0%;
+        margin-right: 0%; */
+        background-size: 100%;
+        /* transform: scale(1); */
+    }
+  }

@@ -8,6 +8,8 @@
             <input type="range" min="1" max="100" value="1" class="CostSlider" id="costSlider5">
         </div>
     */
+
+    // Автоматическая генерация слайдеров
     function GenerateSliders()
     {
         $class = "CostCalculatorServiceText";

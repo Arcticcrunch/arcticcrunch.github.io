@@ -23,8 +23,8 @@
     </title>
 </head>
 
-<body class = "MainPageBackground MainColorOne">
-    <div class = "HeaderPanel">
+<body class = "MainPageBorder MainColorBG" onload="OnPageLoad();">
+    <div class = "HeaderPanel PanelsShadow">
         <!--Заголовок сайта-->
         <div class = "HeaderTittle">
             <header>
@@ -63,68 +63,110 @@
         </div>
 
         <div class = "NavigationPanel">
-            <button class = "NavigationButton ActiveButtonColor">
-                Кнопка 1
+            <button class = "NavigationButton SecondaryColorFG ActiveColorBG" onclick='location.href="https://cleaning"'>
+                Главная
             </button>
-            <button class = "NavigationButton">
-                Кнопка 2
+            <button class = "NavigationButton MainColorFG" onclick='location.href="https://cleaning/about.html"'>
+                О Нас
             </button>
-            <button class = "NavigationButton">
-                Кнопка 3
+            <button class = "NavigationButton MainColorFG">
+                Услуги
             </button>
-            <button class = "NavigationButton">
-                Кнопка 4
+            <button class = "NavigationButton MainColorFG">
+                Заказать
             </button>
-            <button class = "NavigationButton">
-                Кнопка 5
+            <button class = "NavigationButton MainColorFG">
+                Контакты
             </button>
-            <button class = "NavigationButton">
-                Кнопка 6
+            <button class = "NavigationButton MainColorFG">
+                Отзывы
+            </button>
+        </div>
+
+        <div class = "MainLogoPanel">
+            <button onclick='location.href="https://cleaning"' class = "MainLogoButton">
+                <!-- <div> class = "MainLogoImagePanel"> -->
+                <div>
+                    <img class = "MainLogoImage" src="Images/empty.jpg">
+                </div>
+                <div class = "MainLogoText MainColorFG">
+                    Название фирмы
+                </div>
             </button>
         </div>
 
     </div>
 
+
+
+    <!--Основное наполнение сайта:-->
     <main class = "Main">
-        <!--Основное наполнение сайта:<br><br>-->
-        <div class = "IntroLogo">
+
+        <!--Фоновое изображение-->
+        <div class = "MainPageBackgrond">
+            <div class = "MainPageBackgroundPicrue" id="backgroundPicture">
             
+            </div>
         </div>
 
+        <!-- Интро панель на главной странице -->
+        <div class="IntroPanel PanelsBorderStyle MainPanelsWidth">
+            <div class = "IntroPanelLogoPanel">
+                <div>
+                    <img class = "IntroPanelLogo" src="Images/empty.jpg">
+                </div>
+                <div class = "MainLogoText MainColorFG">
+                    Название фирмы
+                </div>
+        </div>
+        </div>
+
+
         <div class = "BuyButtonPanel">
-            <button class = "BuyButton" onclick="NotImplemented();">
+            <button class = "BuyButton PanelsShadow PanelsBorderStyle" onclick="NotImplemented();">
                 Заказать сейчас!
             </button>
         </div>
 
-        <div class = "BenefitsPanel">
-            <div class = "BenefitsPanelTitleText">
-                Почему вам нужно выбрать нас?..
-            </div>
+        <!--Панель преимуществ-->
+        <div class="BenefitsPanelBackground MainColorBG PanelsShadow">
+            <div class = "BenefitsPanel PanelsBorderStyle MainPanelsWidth PanelsShadow">
+                <div class = "BenefitsPanelTitleText">
+                    Почему вам нужно выбрать нас?..
+                </div>
 
-            <div class = "BenefitPanelTable">
-                <div class = "BenefitPanelBlock">
-                    <img class = "BenefitImage" src="Images/empty.jpg">
-                    <div class = "BenefitBlockText" >Причина 1</div>
-                </div>
-                <div class = "BenefitPanelBlock">
-                    <img class = "BenefitImage" src="Images/empty.jpg">
-                    <div class = "BenefitBlockText" >Причина 2</div>
-                </div>
-                <div class = "BenefitPanelBlock">
-                    <img class = "BenefitImage" src="Images/empty.jpg">
-                    <div class = "BenefitBlockText" >Причина 3</div>
+                <div class = "BenefitPanelTable">
+                    <div class = "BenefitPanelBlock">
+                        <img class = "BenefitImage" src="Images/empty.jpg">
+                        <div class = "BenefitBlockText" >Причина 1</div>
+                    </div>
+                    <div class = "BenefitPanelBlock">
+                        <img class = "BenefitImage" src="Images/empty.jpg">
+                        <div class = "BenefitBlockText" >Причина 2</div>
+                    </div>
+                    <div class = "BenefitPanelBlock">
+                        <img class = "BenefitImage" src="Images/empty.jpg">
+                        <div class = "BenefitBlockText" >Причина 3</div>
+                    </div>
                 </div>
             </div>
         </div>
         <br>
         <hr>
         <br>
-        <br>
-        <br>
+
+        <!--Панель услуг-->
+        <div class = "ServiceTypesPanel PanelsBorderStyle MainPanelsWidth">
+            <div class="ServiceTypesHeader SecondaryColorFG">
+                Здесь будет распологаться перечень услуг по пунктам...
+                <div style="font-size: 24px; padding-left: 28px; padding-top: 28px; color:white">
+
+                </div>
+            </div>
+        </div>
         
         <!--Панель калькулятора стоимости-->
-        <div class = "CostCalculatorPanel">
+        <div class = "CostCalculatorPanel PanelsBorderStyle MainPanelsWidth">
             <div class = "CostCalculatorHeader">
                 Калькулятор стоимости
             </div>
@@ -159,10 +201,14 @@
                 <input type="range" min="1" max="100" value="1" class="CostSlider" id="costSlider5">
             </div>
 
-            <?= GenerateSliders();?>
+            
 
         </div>
 
+        <!--Панель доп инфы-->
+        <div class= "AboutInfoPanel PanelsBorderStyle MainPanelsWidth">
+
+        </div>
 
     </main>
 
