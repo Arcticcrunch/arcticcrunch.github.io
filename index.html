@@ -18,6 +18,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="Scripts.js"></script>
     <link rel="stylesheet" type="text/css" href="Styles.css" >
+    <link rel="icon" href="Images/empty.jpg">
     <title>
         Клининговая фирма №1
     </title>
@@ -66,19 +67,19 @@
             <button class = "NavigationButton SecondaryColorFG ActiveColorBG" onclick='location.href="https://cleaning"'>
                 Главная
             </button>
-            <button class = "NavigationButton MainColorFG" onclick='location.href="https://cleaning/about.html"'>
+            <button class = "NavigationButton MainColorFG" onclick="NotImplemented();">
                 О Нас
             </button>
-            <button class = "NavigationButton MainColorFG">
+            <button class = "NavigationButton MainColorFG" onclick="ScrollToServices();">
                 Услуги
             </button>
-            <button class = "NavigationButton MainColorFG">
-                Заказать
+            <button class = "NavigationButton MainColorFG" onclick="ScrollToCalculator();">
+                Калькулятор
             </button>
-            <button class = "NavigationButton MainColorFG">
+            <button class = "NavigationButton MainColorFG" onclick="NotImplemented();">
                 Контакты
             </button>
-            <button class = "NavigationButton MainColorFG">
+            <button class = "NavigationButton MainColorFG" onclick="NotImplemented();">
                 Отзывы
             </button>
         </div>
@@ -118,15 +119,27 @@
                 <div class = "MainLogoText MainColorFG">
                     Название фирмы
                 </div>
-        </div>
+            </div>
         </div>
 
-
-        <div class = "BuyButtonPanel">
+        <!-- Кнопка заказа -->
+        <div class = "BuyButtonPanel"  id="buyButton">
             <button class = "BuyButton PanelsShadow PanelsBorderStyle" onclick="NotImplemented();">
+                <!-- <div style="width: 70%; height: 70%; background-color: blue;">
+
+                </div> -->
                 Заказать сейчас!
             </button>
         </div>
+
+        <!-- Выезжающая панель -->
+        <div class="SlidingPanel PanelsShadow MainColorFG SecondaryColorBG PanelsBorderStyle" id="slidingPanel">
+            <div class="SlidingPanelsBlock">
+                Здесь будут кнопки...
+            </div>
+        </div>
+
+
 
         <!--Панель преимуществ-->
         <div class="BenefitsPanelBackground MainColorBG PanelsShadow">
@@ -151,70 +164,104 @@
                 </div>
             </div>
         </div>
-        <br>
+        <!-- <br>
         <hr>
-        <br>
+        <br> -->
+            
+        <div class="MainGrid">
+            <!-- Кнопка вверх -->
+            <div class = "UpButtonPanel">
+                <button class = "UpButton" onclick="ScrollToTop();">
+                    
+                </button>
+            </div>
 
-        <!--Панель услуг-->
-        <div class = "ServiceTypesPanel PanelsBorderStyle MainPanelsWidth">
-            <div class="ServiceTypesHeader SecondaryColorFG">
-                Здесь будет распологаться перечень услуг по пунктам...
-                <div style="font-size: 24px; padding-left: 28px; padding-top: 28px; color:white">
+
+            <div style=" background-color: rgba(121, 30, 206, 0.37); grid-area: MainContent;">
+                <!--Панель услуг-->
+                <div class = "ServiceTypesPanel PanelsBorderStyle MainPanelsWidth" id = "servicesPanel">
+                    <div class="ServiceTypesHeader SecondaryColorFG">
+                        Здесь будет распологаться перечень услуг по пунктам...
+                        <div style="font-size: 24px; padding-left: 28px; padding-top: 28px; color:white">
+
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Панель калькулятора стоимости-->
+                <div class = "CostCalculatorPanel PanelsBorderStyle MainPanelsWidth" id = "calculatorPanel">
+                    <div class = "CostCalculatorHeader">
+                        Калькулятор стоимости
+                    </div>
+                    <div class = "CostCalculatorServiceText">
+                        Услуга 1 (80 грн/М2)
+                    </div>
+                    <div>
+                        <input type="range" min="1" max="100" value="1" class="CostSlider" id="costSlider1">
+                    </div>
+                    <div class = "CostCalculatorServiceText">
+                        Услуга 2 (160 грн/М)
+                    </div>
+                    <div>
+                        <input type="range" min="1" max="100" value="1" class="CostSlider" id="costSlider2">
+                    </div>
+                    <div class = "CostCalculatorServiceText">
+                        Услуга 3 (200 грн/М2)
+                    </div>
+                    <div>
+                        <input type="range" min="1" max="100" value="1" class="CostSlider" id="costSlider3">
+                    </div>
+                    <div class = "CostCalculatorServiceText">
+                        Услуга 4 (60 грн/М)
+                    </div>
+                    <div>
+                        <input type="range" min="1" max="100" value="1" class="CostSlider" id="costSlider4">
+                    </div>
+                    <div class = "CostCalculatorServiceText">
+                        Услуга 5 (150 грн/М)
+                    </div>
+                    <div>
+                        <input type="range" min="1" max="100" value="1" class="CostSlider" id="costSlider5">
+                    </div>
+
+                    <div>
+                        <div>
+                            Сумма:
+                        </div>
+                        <div>
+                            1400
+                        </div>
+                    </div>
+                    
 
                 </div>
+
+                <!--Панель доп инфы-->
+                <div class= "AboutInfoPanel PanelsBorderStyle MainPanelsWidth">
+
+                </div>
+                
+
+
+
             </div>
+
+            <div class="AdsPanel">
+                <!-- aasdasde -->
+            </div>
+
+            <footer class = "Footer PanelsShadow">
+                <!-- <div><button style="width: 70px; height: 70px" onclick="ScrollToTop();">Вверх!</div> -->
+                <div class = "Creator">Крютченко "Johnta" Никита 2020(c)</div>
+            </footer>
         </div>
         
-        <!--Панель калькулятора стоимости-->
-        <div class = "CostCalculatorPanel PanelsBorderStyle MainPanelsWidth">
-            <div class = "CostCalculatorHeader">
-                Калькулятор стоимости
-            </div>
-            <div class = "CostCalculatorServiceText">
-                Услуга 1 (80 грн/М2)
-            </div>
-            <div>
-                <input type="range" min="1" max="100" value="1" class="CostSlider" id="costSlider1">
-            </div>
-            <div class = "CostCalculatorServiceText">
-                Услуга 2 (160 грн/М)
-            </div>
-            <div>
-                <input type="range" min="1" max="100" value="1" class="CostSlider" id="costSlider2">
-            </div>
-            <div class = "CostCalculatorServiceText">
-                Услуга 3 (200 грн/М2)
-            </div>
-            <div>
-                <input type="range" min="1" max="100" value="1" class="CostSlider" id="costSlider3">
-            </div>
-            <div class = "CostCalculatorServiceText">
-                Услуга 4 (60 грн/М)
-            </div>
-            <div>
-                <input type="range" min="1" max="100" value="1" class="CostSlider" id="costSlider4">
-            </div>
-            <div class = "CostCalculatorServiceText">
-                Услуга 5 (150 грн/М)
-            </div>
-            <div>
-                <input type="range" min="1" max="100" value="1" class="CostSlider" id="costSlider5">
-            </div>
-
-            
-
-        </div>
-
-        <!--Панель доп инфы-->
-        <div class= "AboutInfoPanel PanelsBorderStyle MainPanelsWidth">
-
-        </div>
 
     </main>
 
-    <footer class = "Footer">
-        <div class = "Creator">Крютченко "Johnta" Никита 2020(c)</div>
-    </footer>
+
+
+
 
     <!--
     <script type="text/javascript">
