@@ -74,34 +74,41 @@
     margin: 0;
     padding: 0;
     padding-top: 5px;
-    height: 145px;
+    height: 21.5vh;
+    min-height: 100px;
+    min-width: 1000px;
     position: relative;
     background-color: rgba(250, 255, 255, 1);
     color: rgb(3, 169, 244);
-    margin-bottom: 0px;
+    /* margin-bottom: 0px; */
     /*min-width: 1280px;*/
 }
 
 .HeaderTittle
 {
     /* background-color: olive; */
-    padding-top: 15px;
-    padding-bottom: 18px;
+    padding-top: 1.5vh;
+    min-height: 50px;
+    /* height: 8.4vh; */
+    /* padding-bottom: 2vh; */
+    
     text-align: center;
-    font-size: 54px;
+    font-size: calc(32px + 3.5vh);
+    /* font-size: 2m; */
     font-family: 'Impact';
 }
 
 .SocialPanel
 {
     /* background-color: rgb(51, 15, 15); */
-    margin-top: -75px;
-    margin-bottom: 27px;
+    margin-top: -7.5vh;
+    /* margin-bottom: 2vh; */
     margin-right: 2vh;
     margin-left: auto;
-    min-width: 200px;
+    min-width: 190px;
+    min-height: 20px;
     width: 18vw;
-    height: 5vh;
+    height: 6vh;
     /* width: 300px; */
 }
 
@@ -126,7 +133,7 @@
 }
 .SocialButton:hover
 {
-    transform: scale(1.4);
+    transform: scale(1.42);
     /* box-shadow: 0 0 10px 0 rgba(0,0,0,0.5); */
     transition: 0.3s;
 }
@@ -167,18 +174,24 @@
 .NavigationPanel
 {
     /* background-color: orangered; */
+    margin-top: 3.3vh;
     text-align: center;
-    height: 46px;
+    height: 7vh;
+    min-height: 33px;
+    min-width: 750px;
 }
 .NavigationButton
 {
-    width: 160px;
-    height: 45px;
-    display:inline-block;
-    font-size: 20px;
+    width: 10vw;
+    min-width: 125px;
+    height: 100%;
+    overflow: hidden;
+    display: inline-block;
+    font-size: calc(12px + 1.2vh);
     cursor: pointer;
     outline: none;
     border: none;
+    text-align: center;
     /* background-color: rgb(226, 226, 226); */
     translate: 0.3s;
 }
