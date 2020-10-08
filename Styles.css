@@ -64,7 +64,13 @@
 {
     margin: 0;
     padding: 0;
+
+    /* overflow: hidden */
     /* background-color: rgb(3, 169, 244); */
+}
+.DisableScrollingOnBody
+{
+    overflow: hidden
 }
 
 
@@ -73,35 +79,42 @@
     /* width: 100%; */
     margin: 0;
     padding: 0;
-    padding-top: 5px;
-    height: 21.5vh;
+    /* padding-top: 5px; */
+    height: 16vh;
     min-height: 100px;
     min-width: 1000px;
     position: relative;
     background-color: rgba(250, 255, 255, 1);
     color: rgb(3, 169, 244);
+
+    /* display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 0fr 1fr 0fr;
+    grid-template-areas: 
+        "UpButton MainContent Ads"
+        "Footer Footer Footer"; */
     /* margin-bottom: 0px; */
     /*min-width: 1280px;*/
 }
 
 .HeaderTittle
 {
-    /* background-color: olive; */
-    padding-top: 1.5vh;
+    background-color: olive;
+    /* padding-top: 1.5vh; */
     min-height: 50px;
-    /* height: 8.4vh; */
+    height: 9.8vh;
     /* padding-bottom: 2vh; */
     
     text-align: center;
-    font-size: calc(32px + 3.5vh);
+    font-size: calc(32px + 2.8vh);
     /* font-size: 2m; */
     font-family: 'Impact';
 }
 
 .SocialPanel
 {
-    /* background-color: rgb(51, 15, 15); */
-    margin-top: -7.5vh;
+    background-color: rgb(51, 15, 15);
+    /* margin-top: -6vh; */
     /* margin-bottom: 2vh; */
     margin-right: 2vh;
     margin-left: auto;
@@ -109,6 +122,7 @@
     min-height: 20px;
     width: 18vw;
     height: 6vh;
+    margin-top: -6vh;
     /* width: 300px; */
 }
 
@@ -118,14 +132,14 @@
     /* filter: grayscale(100); */
     filter: hue-rotate(33deg);
     /* display: inline; */
-    content: "";
+    /* content: ""; */
     min-width: 20px;
     min-height: 20px;
     height: 2vw;
     width: 2vw;
     /* width: 35px;
     height: 35px; */
-    margin: 6px;
+    /* margin: 6px; */
     outline: none;
     border-style: none;
     transition: 0.3s;
@@ -171,14 +185,29 @@
     background-size: 100%;
 }
 
+.HeaderPhoneNumerPanel
+{
+    background-color: goldenrod;
+    margin-right: 2vh;
+    margin-left: auto;
+    min-width: 190px;
+    min-height: 30px;
+    width: 18vw;
+    height: 4vh;
+    margin-bottom: -4vh;
+    font-size: calc(22px + 1vh);
+}
+
 .NavigationPanel
 {
-    /* background-color: orangered; */
-    margin-top: 3.3vh;
+    background-color: orangered;
+    margin-top: 0.5vh;
     text-align: center;
-    height: 7vh;
+    height: 5.1vh;
     min-height: 33px;
     min-width: 750px;
+    /* position: relative;
+    bottom: 0%; */
 }
 .NavigationButton
 {
@@ -283,11 +312,7 @@
     /* margin-bottom: 10px; */
     /* height: 300px; */
     height: 100%;
-    
-    /* margin-left: auto;
-    margin-right: auto; */
-    /* translate: 2s; */
-    animation: MainPageBackgroundZoomAnimation 33s ease-in-out infinite both;
+    animation: MainPageBackgroundZoomAnimation 35s ease-in-out infinite both;
 }
 
 
@@ -460,6 +485,7 @@
     margin-top: 40px;
     padding-top: 40px;
     padding-bottom: 40px;
+    z-index: 5;
     /* min-width: 200px; */
 }
 
@@ -483,7 +509,7 @@
 
 .UpButtonPanel
 {
-    background-color: rgba(199, 110, 98, 0.445);
+    background-color: rgba(199, 110, 98, 0);
     padding: 0%;
     margin-bottom: -12vh;
     margin: 0%;
@@ -616,6 +642,180 @@
     background-color: rgba(169, 169, 169, 0);
     grid-area: Ads;
 }
+
+
+
+
+
+.UpButtonFixed
+{
+    background-color: rgba(255, 255, 255, 0);
+    position: fixed;
+    width: 16vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    z-index: 4;
+}
+
+.UpButtonFixedHidden
+{
+    left: -100vw;
+}
+
+.UpButtonGFX
+{
+    background: url("Images/UpArrowEmpty.png");
+    /* background-size: cover; */
+    background-size: 6.8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-color: gold; */
+    position: fixed;
+    width: 16vw;
+    height: 30vh;
+    left: 0px;
+    top: 105vh;
+    /* z-index: -1; */
+    transition: 0.45s ease-in-out;
+    opacity: 0;
+}
+.UpButtonGFXShown
+{
+    opacity: 1;
+    transition: 0.28s ease-in-out;
+    top: 61vh;
+}
+.UpButtonGFXOnMouseOver
+{
+    transform: scale(1.42);
+    background: url("images/UpArrowFilled.png");
+    background-size: 5.8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* color: green; */
+    /* filter: hue-rotate(30deg); */
+    transition: 0.25s ease-in-out;
+}
+.UpButtonGFXOnClick
+{
+    transform: scale(1.4);
+    background: url("images/UpArrowFilled.png");
+    background-size: 5.5vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.52s ease-in-out;
+    top: -75vh;
+    opacity: 0;
+}
+
+
+.OrderPanelBackground
+{
+    /* transform-style: preserve-3d; */
+    /* background-color: rgba(0, 0, 0, 0.575); */
+    position: fixed;
+    width: 200vw;
+    height: 200vh;
+    top: 0px;
+    left: 0px;
+    z-index: 6;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+.OrderPanelBackgroundShown
+{
+    /* background-color: rgba(0, 0, 0, 0.63); */
+    backdrop-filter: brightness(50%) blur(4px);
+    /* backdrop-filter: ; */
+    visibility: visible;
+    transition: 0.6s ease-in-out;
+    opacity: 1;
+}
+
+.OrderPanel
+{
+    /* background-color: hotpink; */
+    position: fixed;
+    overflow: hidden;
+    top: 15vh;
+    bottom: 15vh;
+    left: 50vw;
+    right: 50vw;
+    width: auto;
+    height: auto;
+    z-index: 7;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    transform-origin: center;
+    text-align: center;
+    /* align-content: center;
+    align-items: center; */
+    /* text-align: center; */
+    /* margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px; */
+    /* transform: scaleX(0); */
+    
+}
+.OrderPanelShown
+{
+    /* z-index: 7; */
+    left: 25vw;
+    right: 25vw;
+    transition: 0.55s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.OrderConentContainer
+{
+    background-color: lightgreen;
+    /* min-width: 470px; */
+    min-height: 420px;
+    width: 770px;
+    height: 620;
+    margin-left: 50%;
+    transform: translate(-50%, -0%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 0fr 1fr 0fr;
+    grid-template-areas: 
+        "UpButton MainContent Ads"
+        "Footer Footer Footer"; */
+    /* margin-left: 5vw;
+    margin-right: 5vw; */
+}
+.OrderPanelImageContainer
+{
+    background-color: rgb(109, 91, 187);
+    
+}
+.OrderPanelImage
+{
+    background-color: rgb(64, 104, 25);
+    width: 15vh;
+    height: 15vh;
+    margin: auto;
+    /* display: inline-block; */
+    margin-top: auto;
+    /* margin-bottom: auto;
+    display: block; */
+}
+.OrderDetailesPanel
+{
+    background-color: rgb(208, 228, 35);
+    /* width: 10vw;
+    height: 40vh; */
+    /* display: block; */
+}
+
 
 
 
