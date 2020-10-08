@@ -21,7 +21,7 @@ var calculatorResult = 0;
 
 function Redirect()
 {
-    window.location.href = window.location.origin + "/mainpage.php";
+    window.location.href = "https://arcticcrunch.github.ui/mainpage.php";
 }
 
 
