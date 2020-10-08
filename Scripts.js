@@ -21,7 +21,7 @@ var calculatorResult = 0;
 
 function Redirect()
 {
-    window.location.href = "http://cleaning/mainpage.php";
+    window.location.href = window.location.origin + "/mainpage.php";
 }
 
 
