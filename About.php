@@ -1,3 +1,17 @@
+<?php
+    //require "FunctionLibrary.php";
+    //require "Connections.php"
+
+    // function PlaceTestText()
+    // {
+    //     return file_get_contents("Text/FillerArticle.txt");
+    // }
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,13 +20,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="Scripts.js"></script>
     <link rel="stylesheet" type="text/css" href="Styles.css" >
+    <link rel="icon" href="Images/empty.jpg">
     <title>
         Клининговая фирма №1
     </title>
 </head>
 
-<body class = "MainPageBackground MainColorBG">
-    <div class = "HeaderPanel">
+<body class = "MainPageBorder MainColorBG" onload="OnPageLoad();" id="mainPageBorder">
+    <div class = "HeaderPanel PanelsShadow">
         <!--Заголовок сайта-->
         <div class = "HeaderTittle">
             <header>
@@ -47,47 +62,56 @@
                 onclick='location.href="https://github.com/Arcticcrunch/arcticcrunch.github.io"'
                 title="Репозиторий данного сайта на GitHub">
             </button>
+        </div>
 
+        <!-- Панель с номером обратной связи -->
+        <div class="HeaderPhoneNumerPanel">
+            +3800-555-35-35
         </div>
 
         <div class = "NavigationPanel">
-            <button class = "NavigationButton MainColorFG" onclick='location.href="https://cleaning"'>
+            <button class = "NavigationButton MainColorFG SecondaryColorBG" onclick='location.href="https://cleaning"'>
                 Главная
             </button>
-            <button class = "NavigationButton SecondaryColorFG ActiveColorBG" onclick='location.href="https://cleaning/testphp.html"'>
+            <button class = "NavigationButton SecondaryColorFG ActiveColorBG" onclick='location.href="https://cleaning/about.php"'>
                 О Нас
             </button>
-            <button class = "NavigationButton MainColorFG">
+            <button class = "NavigationButton MainColorFG SecondaryColorBG" onclick="ScrollToServices();">
                 Услуги
             </button>
-            <button class = "NavigationButton MainColorFG">
-                Заказать
+            <button class = "NavigationButton MainColorFG SecondaryColorBG" onclick="ScrollToCalculator();">
+                Калькулятор
             </button>
-            <button class = "NavigationButton MainColorFG">
+            <button class = "NavigationButton MainColorFG SecondaryColorBG" onclick="NotImplemented();">
                 Контакты
             </button>
-            <button class = "NavigationButton MainColorFG">
+            <button class = "NavigationButton MainColorFG SecondaryColorBG" onclick='location.href="https://cleaning/testphp.php"''>
                 Отзывы
             </button>
         </div>
 
         <div class = "MainLogoPanel">
-            <div class = "MainLogoImagePanel">
-                <img class = "MainLogoImage" src="Images/empty.jpg">
-            </div>
-            <div class = "MainLogoText MainColorFG">
-                Название фирмы
-            </div>
+            <button onclick='location.href="https://cleaning"' class = "MainLogoButton SecondaryColorBG">
+                <div class="MainLogoImage">
+                    <!-- <img class = "MainLogoImage" src="Images/empty.jpg"> -->
+                </div>
+                <!-- <div class = "MainLogoText MainColorFG">
+                    Название фирмы
+                </div> -->
+            </button>
         </div>
 
     </div>
 
-    <main class = "Main">
 
 
-    </main>
 
-    <footer class = "Footer">
-        <div class = "Creator">Крютченко "Johnta" Никита 2020(c)</div>
-    </footer>
 </body>
+
+</html>
+
+
+
+
+    
+  

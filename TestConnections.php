@@ -2,8 +2,8 @@
     // Подключение к базе данных
     $DBHost = "localhost";                   // Адрес сервера
     $DBUser = 'root';                        // имя пользователя
-    $DBRootPassword = '12345678';     // пароль
-    $DBTable = "orderstdatabase";                // Имя таблицы
+    $DBRootPassword = '12345678';            // пароль
+    $DBTable = "orderstdatabase";              // Имя таблицы
 
 
     function ConnectToDataBase($DBHost, $DBUser, $DBRootPassword, $DBTable)
@@ -36,6 +36,8 @@
  
 
 ?>
+
+
 
 
 

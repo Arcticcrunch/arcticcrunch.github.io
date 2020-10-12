@@ -73,33 +73,33 @@
             <button class = "NavigationButton SecondaryColorFG ActiveColorBG" onclick='location.href="https://cleaning"'>
                 Главная
             </button>
-            <button class = "NavigationButton MainColorFG" onclick="NotImplemented();">
+            <button class = "NavigationButton MainColorFG SecondaryColorBG" onclick='location.href="https://cleaning/about.php"'>
                 О Нас
             </button>
-            <button class = "NavigationButton MainColorFG" onclick="ScrollToServices();">
+            <button class = "NavigationButton MainColorFG SecondaryColorBG" onclick="ScrollToServices();">
                 Услуги
             </button>
-            <button class = "NavigationButton MainColorFG" onclick="ScrollToCalculator();">
+            <button class = "NavigationButton MainColorFG SecondaryColorBG" onclick="ScrollToCalculator();" style="font-size: calc(9px + 1.15vh);">
                 Калькулятор
             </button>
-            <button class = "NavigationButton MainColorFG" onclick="NotImplemented();">
+            <button class = "NavigationButton MainColorFG SecondaryColorBG" onclick="NotImplemented();">
                 Контакты
             </button>
-            <button class = "NavigationButton MainColorFG" onclick='location.href="https://cleaning/testphp.php"''>
+            <button class = "NavigationButton MainColorFG SecondaryColorBG" onclick='location.href="https://cleaning/testphp.php"''>
                 Отзывы
             </button>
         </div>
 
-        <!-- <div class = "MainLogoPanel">
-            <button onclick='location.href="https://cleaning"' class = "MainLogoButton">
-                <div>
-                    <img class = "MainLogoImage" src="Images/empty.jpg">
+        <div class = "MainLogoPanel">
+            <button onclick='location.href="https://cleaning"' class = "MainLogoButton SecondaryColorBG">
+                <div class="MainLogoImage">
+                    <!-- <img class = "MainLogoImage" src="Images/empty.jpg"> -->
                 </div>
-                <div class = "MainLogoText MainColorFG">
+                <!-- <div class = "MainLogoText MainColorFG">
                     Название фирмы
-                </div>
+                </div> -->
             </button>
-        </div> -->
+        </div>
 
     </div>
 
@@ -118,6 +118,7 @@
         <!-- Интро панель на главной странице -->
         <div class="IntroPanel PanelsBorderStyle MainPanelsWidth">
             <div class = "IntroPanelLogoPanel">
+                фыв
                 <div>
                     <img class = "IntroPanelLogo" src="Images/empty.jpg">
                 </div>
@@ -182,7 +183,7 @@
             </div>
 
 
-            <div style=" background-color: rgba(121, 30, 206, 0.37); grid-area: MainContent;">
+            <div  class="PanelsShadow" style=" background-color: rgba(121, 30, 206, 0.37); grid-area: MainContent; z-index: 1;">
                 <!--Панель услуг-->
                 <div class = "ServiceTypesPanel PanelsBorderStyle MainPanelsWidth" id = "servicesPanel">
                     <div class="ServiceTypesHeader SecondaryColorFG">
@@ -259,7 +260,30 @@
 
             <footer class = "Footer PanelsShadow">
                 <!-- <div><button style="width: 70px; height: 70px" onclick="ScrollToTop();">Вверх!</div> -->
+              
+                <div class = "NavigationPanel">
+                    <button class = "NavigationButton SecondaryColorFG ActiveColorBG" onclick='location.href="https://cleaning"'>
+                        Главная
+                    </button>
+                    <button class = "NavigationButton MainColorFG SecondaryColorBG" onclick='location.href="https://cleaning/about.php"'>
+                        О Нас
+                    </button>
+                    <button class = "NavigationButton MainColorFG SecondaryColorBG" onclick="ScrollToServices();">
+                        Услуги
+                    </button>
+                    <button class = "NavigationButton MainColorFG SecondaryColorBG" onclick="ScrollToCalculator();" style="font-size: calc(9px + 1.15vh);">
+                        Калькулятор
+                    </button>
+                    <button class = "NavigationButton MainColorFG SecondaryColorBG" onclick="NotImplemented();">
+                        Контакты
+                    </button>
+                    <button class = "NavigationButton MainColorFG SecondaryColorBG" onclick='location.href="https://cleaning/testphp.php"''>
+                        Отзывы
+                    </button>
+                </div>
+
                 <div class = "Creator">Крютченко "Johnta" Никита 2020(c)</div>
+
             </footer>
         </div>
         
@@ -289,14 +313,36 @@
                     </div>
                 </div>
 
-                <form method="POST" class="OrderDetailesPanel">
-                    Готовы сделать заказ? :)
-                    <input name="name1" autocomplete="off" value="Имя"/>
-                    <!-- <input type="tel"/>
-                    <input name="commentary" autocomplete="off"/> -->
 
-                    <input type="submit" value="Заказать!" name="button"/>
-                    
+
+
+
+                <iframe name="iframe1" style="display: none;" ></iframe>
+                <form method="POST" class="OrderDetailesPanel" target="iframe1" action="MakeOrder.php">
+                    Готовы сделать заказ? :)
+                    <br>
+                    Как к вам обращаться?
+                    <br>
+                    Имя:*
+                    <br>
+                    <input name="nameInput" autocomplete="off"/>
+                    <br>
+                    Фамилия:
+                    <br>
+                    <input name="secondNameInput" autocomplete="off"/>
+                    <br>
+                    Отчество:
+                    <br>
+                    <input name="lastNameInput" autocomplete="off"/>
+                    <br>
+                    Телефон:*
+                    <br>
+                    <input name="phoneInput" autocomplete="off"/>
+                    <br>
+
+                    <input name="submitOrderButton" type="submit" value="Заказать!"/>
+
+
                 </form>
             </div>
         </div>
