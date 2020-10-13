@@ -119,9 +119,9 @@
         <div class="IntroPanel PanelsBorderStyle MainPanelsWidth">
             <div class = "IntroPanelLogoPanel">
                 фыв
-                <div>
+                <!-- <div> -->
                     <img class = "IntroPanelLogo" src="Images/empty.jpg">
-                </div>
+                <!-- </div> -->
                 <div class = "MainLogoText MainColorFG">
                     Название фирмы
                 </div>

@@ -105,6 +105,24 @@
 
 
 
+    <div class="parallax">
+        <div class="parallax__layer parallax__layer--base">
+                Foreground
+        </div>
+
+        <div class="parallax__layer parallax__layer--back">
+                Hello there!
+        </div>
+
+        <div class="parallax__layer parallax__layer--mid">
+                Hello !!
+        </div>
+
+        <!-- <div>
+            Regular
+        </div> -->
+    </div>
+
 
 </body>
 
