@@ -595,7 +595,7 @@
     background-color: rgba(67, 228, 80, 0.096);
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 0fr 1fr 0fr;
+    /* grid-template-rows: 0fr 1fr 0fr; */
     grid-template-areas: 
         "UpButton MainContent Ads"
         "Footer Footer Footer";
@@ -697,16 +697,22 @@
     /* overflow-x: hidden; */
     /* position: relative; */
     background-color: rgb(160, 243, 82);
+    min-height: 800px;
     /* z-index: 1; */
     /* width: 80vw */
+    display: flex;
+    justify-content: left;
+    align-items: center;
 }
 .CostCalculatorPanel
 {
     text-align: left;
     background-color: seagreen;
-    margin-left: 5vw;
-    width: 50vw;
+    margin-left: 17vw;
+    width: 40vw;
     padding-bottom: 20px;
+
+
     /* z-index: 1; */
     /* width: 60%; */
     /* min-height: 50px; */
