@@ -81,11 +81,22 @@ function ScrollToTop()
 function ScrollToCalculator()
 {
     var yPos = calculatorPanel.getBoundingClientRect().top - (window.innerHeight * scrollTopOffset);
-    window.scrollTo({top: yPos, behavior: 'smooth'});
+    yPos += window.scrollY;
+    window.scrollTo({top: Math.abs(yPos), behavior: 'smooth'});
 }
 function ScrollToServices()
 {
     var yPos = servicesPanel.getBoundingClientRect().top - (window.innerHeight * scrollTopOffset);
+    yPos += window.scrollY;
+    // if(yPos > 0)
+    // {
+    //     // yPos = yPos - (window.innerHeight * scrollTopOffset);
+    // }
+    // else
+    // {
+    //     yPos = -yPos;// - (window.innerHeight * scrollTopOffset);
+    // }
+    // alert(window.scrollY);
     window.scrollTo({top: yPos, behavior: 'smooth'});
 }
 

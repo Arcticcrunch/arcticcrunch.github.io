@@ -70,22 +70,22 @@
         </div>
 
         <div class = "NavigationPanel">
-            <button class = "NavigationButton SecondaryColorFG ActiveColorBG" onclick='location.href="https://cleaning"'>
+            <button class = "NavigationButtonTop SecondaryColorFG ActiveColorBG" onclick='location.href="https://cleaning"'>
                 Главная
             </button>
-            <button class = "NavigationButton MainColorFG SecondaryColorBG" onclick='location.href="https://cleaning/about.php"'>
+            <button class = "NavigationButtonTop MainColorFG SecondaryColorBG" onclick='location.href="https://cleaning/about.php"'>
                 О Нас
             </button>
-            <button class = "NavigationButton MainColorFG SecondaryColorBG" onclick="ScrollToServices();">
+            <button class = "NavigationButtonTop MainColorFG SecondaryColorBG" onclick="ScrollToServices();">
                 Услуги
             </button>
-            <button class = "NavigationButton MainColorFG SecondaryColorBG" onclick="ScrollToCalculator();" style="font-size: calc(9px + 1.15vh);">
+            <button class = "NavigationButtonTop MainColorFG SecondaryColorBG" onclick="ScrollToCalculator();" style="font-size: calc(9px + 1.15vh);">
                 Калькулятор
             </button>
-            <button class = "NavigationButton MainColorFG SecondaryColorBG" onclick="NotImplemented();">
+            <button class = "NavigationButtonTop MainColorFG SecondaryColorBG" onclick="NotImplemented();">
                 Контакты
             </button>
-            <button class = "NavigationButton MainColorFG SecondaryColorBG" onclick='location.href="https://cleaning/testphp.php"''>
+            <button class = "NavigationButtonTop MainColorFG SecondaryColorBG" onclick='location.href="https://cleaning/testphp.php"''>
                 Отзывы
             </button>
         </div>
@@ -157,15 +157,18 @@
                 <div class = "BenefitPanelTable">
                     <div class = "BenefitPanelBlock">
                         <img class = "BenefitImage" src="Images/empty.jpg">
-                        <div class = "BenefitBlockText" >Причина 1</div>
+                        <div class = "BenefitBlockTitle" >Индивидуальный подход</div>
+                        <div class = "BenefitBlockText" >Мы подбираем индивидуальный подход к каждому клиенту исходя из его потребностей.</div>
                     </div>
                     <div class = "BenefitPanelBlock">
                         <img class = "BenefitImage" src="Images/empty.jpg">
-                        <div class = "BenefitBlockText" >Причина 2</div>
+                        <div class = "BenefitBlockTitle" >Качество</div>
+                        <div class = "BenefitBlockText" >Высокое качество - это наша основная прерогатива.</div>
                     </div>
                     <div class = "BenefitPanelBlock">
                         <img class = "BenefitImage" src="Images/empty.jpg">
-                        <div class = "BenefitBlockText" >Причина 3</div>
+                        <div class = "BenefitBlockTitle" >Оперативность</div>
+                        <div class = "BenefitBlockText" >Мы действуем быстро и с полной отдачей.</div>
                     </div>
                 </div>
             </div>
@@ -183,18 +186,33 @@
             </div>
 
 
-            <div  class="PanelsShadow" style=" background-color: rgba(121, 30, 206, 0.37); grid-area: MainContent; z-index: 1;">
+            <div class="MainGridContent PanelsShadow">
                 <!--Панель услуг-->
                 <div class = "ServiceTypesPanel PanelsBorderStyle MainPanelsWidth" id = "servicesPanel">
                     <div class="ServiceTypesHeader SecondaryColorFG">
-                        Здесь будет распологаться перечень услуг по пунктам...
+                        <!-- Здесь будет распологаться перечень услуг по пунктам... -->
+                        <!-- <br> -->
+                        Клининг компания занимается такими видами работ:
+                        <br>
+                        Уборка в квартирах, отдельных комнатах;
+                        Уборка в частных домах и на их территориях;
+                        Клининг в офисных помещениях разного типа: кабинеты, свободные пространства, конференц-залы и проч.;
+                        Очищение фасадов зданий от загрязнений всех типов сложностей;
+                        Уборка в помещениях сразу после строительных или ремонтных работ;
+                        Мойка окон всех форм и размеров;
+                        Клининг помещений, которые претерпели пожар или затопление;
+                        Очистка плитки, мрамора, паркета;
+                        Осуществление очистки ковра и других тканей, используя специализированные химические средства;
+                        Выполнение уборки на высоте;
+                        Очищение воздуха.
                         <div style="font-size: 24px; padding-left: 28px; padding-top: 28px; color:white">
 
-                        </div>
                     </div>
                 </div>
+            </div>
                 
-                <!--Панель калькулятора стоимости-->
+            <!--Панель калькулятора стоимости-->
+            <div class="CostCalculatorBG">
                 <div class = "CostCalculatorPanel PanelsBorderStyle MainPanelsWidth" id = "calculatorPanel">
                     <div class = "CostCalculatorHeader">
                         Калькулятор стоимости
@@ -241,6 +259,7 @@
                     
 
                 </div>
+            </div>
 
                 <!--Панель доп инфы-->
                 <div class= "AboutInfoPanel PanelsBorderStyle MainPanelsWidth">
@@ -262,22 +281,22 @@
                 <!-- <div><button style="width: 70px; height: 70px" onclick="ScrollToTop();">Вверх!</div> -->
               
                 <div class = "NavigationPanel">
-                    <button class = "NavigationButton SecondaryColorFG ActiveColorBG" onclick='location.href="https://cleaning"'>
+                    <button class = "NavigationButtonBottom SecondaryColorFG ActiveColorBG" onclick='location.href="https://cleaning"'>
                         Главная
                     </button>
-                    <button class = "NavigationButton MainColorFG SecondaryColorBG" onclick='location.href="https://cleaning/about.php"'>
+                    <button class = "NavigationButtonBottom MainColorFG SecondaryColorBG" onclick='location.href="https://cleaning/about.php"'>
                         О Нас
                     </button>
-                    <button class = "NavigationButton MainColorFG SecondaryColorBG" onclick="ScrollToServices();">
+                    <button class = "NavigationButtonBottom MainColorFG SecondaryColorBG" onclick="ScrollToServices();">
                         Услуги
                     </button>
-                    <button class = "NavigationButton MainColorFG SecondaryColorBG" onclick="ScrollToCalculator();" style="font-size: calc(9px + 1.15vh);">
+                    <button class = "NavigationButtonBottom MainColorFG SecondaryColorBG" onclick="ScrollToCalculator();" style="font-size: calc(9px + 1.15vh);">
                         Калькулятор
                     </button>
-                    <button class = "NavigationButton MainColorFG SecondaryColorBG" onclick="NotImplemented();">
+                    <button class = "NavigationButtonBottom MainColorFG SecondaryColorBG" onclick="NotImplemented();">
                         Контакты
                     </button>
-                    <button class = "NavigationButton MainColorFG SecondaryColorBG" onclick='location.href="https://cleaning/testphp.php"''>
+                    <button class = "NavigationButtonBottom MainColorFG SecondaryColorBG" onclick='location.href="https://cleaning/testphp.php"''>
                         Отзывы
                     </button>
                 </div>

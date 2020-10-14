@@ -237,17 +237,14 @@
     grid-area: NavigationPanel;
     min-height: 33px;
     min-width: 755px;
-
-    /* height: 5.1vh;
-    margin-top: 0.5vh; */
 }
-.NavigationButton
+
+.NavigationButtonTop
 {
     width: 9vw;
     min-width: 121px;
     height: 100%;
     overflow: hidden;
-    /* display: inline-block; */
     font-size: calc(11px + 1.1vh);
     cursor: pointer;
     outline: none;
@@ -256,15 +253,34 @@
     /* background-color: rgb(226, 226, 226); */
     transition: 0.2s;
 }
-.NavigationButton:hover 
+.NavigationButtonTop:hover 
 {
-    /* color: white; */
     background-color: rgb(3, 169, 244);
     color: white;
-    /* background-color: rgb(64, 221, 49); */
-    /* transform: scale(1.4); */
     transition: 0.32s;
 }
+.NavigationButtonBottom
+{
+    width: 9vw;
+    min-width: 121px;
+    height: 100%;
+    overflow: hidden;
+    font-size: calc(11px + 1.1vh);
+    cursor: pointer;
+    outline: none;
+    border: none;
+    text-align: center;
+    /* background-color: rgb(226, 226, 226); */
+    transition: 0.2s;
+}
+.NavigationButtonBottom:hover 
+{
+    background-color: rgb(19, 52, 68);
+    color: white;
+    transition: 0.32s;
+}
+
+
 
 
 
@@ -327,7 +343,7 @@
     /* margin-left: auto;
     margin-right: auto; */
     /* width: 63%; */
-    min-height: 3000px;
+    /* min-height: 3000px; */
     font-size: 20px;
     min-width: 1120px;
 }
@@ -375,8 +391,8 @@
 
 .IntroPanel
 {
-    margin-top: 5.5vh;
-    margin-bottom: 4vh;
+    margin-top: 4.4vh;
+    margin-bottom: 3.2vh;
     margin-left: auto;
     margin-right: auto;
     padding-top: 30px;
@@ -410,7 +426,7 @@
     color: rgb(3, 169, 244);
     text-shadow: none;
     text-align: center;
-    font-size: 30px;
+    font-size: calc(13px + 2.12vh);
     cursor: pointer;
     height: 100%;
     width: 100%;
@@ -452,7 +468,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 235px;
-    height: 90px;
+    height: 11vh;
     z-index: 3;
 }
 
@@ -516,6 +532,9 @@
 .BenefitPanelTable
 {
     background-color: tomato;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
     text-align: center;
     margin-top: 50px;
     width: 100%;
@@ -523,23 +542,38 @@
 }
 .BenefitPanelBlock
 {
-    display:inline-block;
     text-align: center;
-    width: 25%;
-    height: 280px;
+    /* width: 25%; */
+    height: 315px;
     background-color: yellow;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 17px;
+    margin-right: 17px;
 }
 .BenefitImage
 {
     margin-top: 28px;
-    width: 180px;
-    height: 180px;
+    width: 120px;
+    height: 120px;
+}
+.BenefitBlockTitle
+{
+    background-color: rgb(204, 252, 252);
+    width: 100%;
+    height: 62px;
+    margin-top: 7px;
+    /* text-align: center; */
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .BenefitBlockText
 {
-    font-size: 35px;
+    margin-top: 11px;
+    text-align: center;
+    font-size: 18px;
+    padding-left: 7px;
+    padding-right: 7px;
 }
 .BenefitsPanelBackground
 {
@@ -554,8 +588,10 @@
 
 .MainGrid
 {
-    height: 2200px;
+    /* height: 2200px; */
+    /* height: 2300px; */
     width: 100%;
+    overflow: hidden;
     background-color: rgba(67, 228, 80, 0.096);
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
@@ -609,12 +645,20 @@
 } */
 
 
+.MainGridContent
+{
+    background-color: goldenrod;
+    grid-area: MainContent;
+    z-index: 1;
+}
+
+
 .ServiceTypesPanel
 {
     margin-top: 50px;
     background-color: blue;
     margin-bottom: 50px;
-    height: 600px;
+    height: 1000px;
     /* z-index: 1; */
 }
 .ServiceTypesHeader
@@ -646,14 +690,26 @@
     -webkit-transition: .2s;
     transition: opacity .2s;
 }
+.CostCalculatorBG
+{
+    margin-left: -17vw;
+    margin-right: -17vw;
+    /* overflow-x: hidden; */
+    /* position: relative; */
+    background-color: rgb(160, 243, 82);
+    /* z-index: 1; */
+    /* width: 80vw */
+}
 .CostCalculatorPanel
 {
     text-align: left;
-
     background-color: seagreen;
+    margin-left: 5vw;
+    width: 50vw;
     padding-bottom: 20px;
+    /* z-index: 1; */
     /* width: 60%; */
-    min-height: 50px;
+    /* min-height: 50px; */
 }
 
 .CostCalculatorServiceText
@@ -738,7 +794,7 @@
     height: 30vh;
     left: 0px;
     top: 105vh;
-    /* z-index: -1; */
+    z-index: 3;
     transition: 0.45s ease-in-out;
     opacity: 0;
 }
