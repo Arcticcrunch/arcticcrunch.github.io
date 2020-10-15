@@ -56,6 +56,15 @@ function OnPageLoad()
     window.addEventListener("scroll", OnScrollEvent);
 
     OnScrollEvent();
+
+    //Регистрация кнопки для отправки ассинхронной ajax формы
+
+    $("#OrderButton").click(
+		function(){
+            SendOrderForm('result_form', 'OrderForm', 'MakeOrder.php');
+			return false; 
+		}
+	);
     
     // window.addEventListener('scroll', function() {
     //     document.getElementById('showScroll').innerHTML = pageYOffset + 'px';
@@ -82,21 +91,12 @@ function ScrollToCalculator()
 {
     var yPos = calculatorPanel.getBoundingClientRect().top - (window.innerHeight * scrollTopOffset);
     yPos += window.scrollY;
-    window.scrollTo({top: Math.abs(yPos), behavior: 'smooth'});
+    window.scrollTo({top: yPos, behavior: 'smooth'});
 }
 function ScrollToServices()
 {
     var yPos = servicesPanel.getBoundingClientRect().top - (window.innerHeight * scrollTopOffset);
     yPos += window.scrollY;
-    // if(yPos > 0)
-    // {
-    //     // yPos = yPos - (window.innerHeight * scrollTopOffset);
-    // }
-    // else
-    // {
-    //     yPos = -yPos;// - (window.innerHeight * scrollTopOffset);
-    // }
-    // alert(window.scrollY);
     window.scrollTo({top: yPos, behavior: 'smooth'});
 }
 
@@ -104,10 +104,6 @@ function OnScrollEvent()
 {
     UpdateTopSlidingPanel();
     UpdateUpButtonSlidingPanel();
-
-
-    // var yPos = buyButton.scrollY;
-    // alert(buyButton);
 
 }
 
@@ -188,6 +184,25 @@ function EnableScrolling()
     mainPageBorder.classList.remove("DisableScrollingOnBody");
 }
 
+//Асинхронная отправка ajax формы заказа
+function SendOrderForm(result_form, ajax_form, url) {
+    $.ajax({
+        url:     url,                               //url страницы (action_ajax_form.php)
+        type:     "POST",                           //метод отправки
+        dataType: "html",                           //формат данных
+        data: $("#"+ajax_form).serialize(),         // Сеарилизуем объект
+
+        success: function(response) {               //Данные отправлены успешно
+            alert("Данные успешно отправлены!");
+        	// result = $.parseJSON(response);
+        	// $('#result_form').html('Имя: '+result.name+'<br>Телефон: '+result.phonenumber);
+    	},
+        error: function(response) {                 // Данные не отправлены
+            alert("Ошибка при отправке формы заказа!");
+            //$('#result_form').html('Ошибка. Данные не отправлены.');
+    	}
+ 	});
+}
 
 
 function UpdateCostCalculatorResult()

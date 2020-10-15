@@ -19,6 +19,7 @@
     <meta name="viewport", content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="Scripts.js"></script>
+    <script src="JQuery.js"></script>
     <link rel="stylesheet" type="text/css" href="Styles.css" >
     <link rel="icon" href="Images/empty.jpg">
     <title>
@@ -141,8 +142,12 @@
         <!-- Выезжающая панель -->
         <div class="SlidingPanel PanelsShadow MainColorFG SecondaryColorBG PanelsBorderStyle" id="slidingPanel">
             <div class="SlidingPanelsBlock">
-                Здесь будут кнопки...
+                
             </div>
+            <div class="SlidingPanelsBlock">
+                
+            </div>
+
         </div>
 
 
@@ -173,9 +178,7 @@
                 </div>
             </div>
         </div>
-        <!-- <br>
-        <hr>
-        <br> -->
+
             
         <div class="MainGrid">
             <!-- Кнопка вверх -->
@@ -212,7 +215,7 @@
             </div>
                 
             <!--Панель калькулятора стоимости-->
-            <div class="CostCalculatorBG">
+            <div class="CostCalculatorBG PanelsShadow">
                 <div class = "CostCalculatorPanel PanelsBorderStyle MainPanelsWidth" id = "calculatorPanel">
                     <div class = "CostCalculatorHeader">
                         Калькулятор стоимости
@@ -336,8 +339,8 @@
 
 
 
-                <iframe name="iframe1" style="display: none;" ></iframe>
-                <form method="POST" class="OrderDetailesPanel" target="iframe1" action="MakeOrder.php">
+                <!-- <iframe name="iframe1" style="display: none;" ></iframe> -->
+                <form method="POST" id="OrderForm" class="OrderDetailesPanel" action="">
                     Готовы сделать заказ? :)
                     <br>
                     Как к вам обращаться?
@@ -359,7 +362,7 @@
                     <input name="phoneInput" autocomplete="off"/>
                     <br>
 
-                    <input name="submitOrderButton" type="submit" value="Заказать!"/>
+                    <input name="submitOrderButton" id="OrderButton" type="button" value="Заказать!"/>
 
 
                 </form>
