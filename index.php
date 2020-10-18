@@ -27,7 +27,7 @@
     </title>
 </head>
 
-<body class = "MainPageBorder MainColorBG" onload="OnPageLoad();" id="mainPageBorder">
+<body class = "MainPageBorder SecondaryColorBG" onload="OnPageLoad();" id="mainPageBorder">
     <div class = "HeaderPanel PanelsShadow">
         <!--Заголовок сайта-->
         <div class = "HeaderTittle">
@@ -119,7 +119,6 @@
         <!-- Интро панель на главной странице -->
         <div class="IntroPanel PanelsBorderStyle MainPanelsWidth">
             <div class = "IntroPanelLogoPanel">
-                фыв
                 <!-- <div> -->
                     <img class = "IntroPanelLogo" src="Images/empty.jpg">
                 <!-- </div> -->
@@ -153,7 +152,7 @@
 
 
         <!--Панель преимуществ-->
-        <div class="BenefitsPanelBackground MainColorBG PanelsShadow" id="benefitsPanel">
+        <div  id="benefitsPanel" class="BenefitsPanelBackground MainColorBG PanelsShadow">
             <div class = "BenefitsPanel PanelsBorderStyle MainPanelsWidth PanelsShadow">
                 <div class = "BenefitsPanelTitleText">
                     Почему вам нужно выбрать нас?..
@@ -189,25 +188,29 @@
             </div>
 
 
-            <div class="MainGridContent PanelsShadow">
+            <div class=" MainGridContent PanelsShadow ">
                 <!--Панель услуг-->
                 <div class = "ServiceTypesPanel PanelsBorderStyle MainPanelsWidth" id = "servicesPanel">
                     <div class="ServiceTypesHeader SecondaryColorFG">
                         <!-- Здесь будет распологаться перечень услуг по пунктам... -->
                         <!-- <br> -->
-                        Клининг компания занимается такими видами работ:
+                        Мы занимаемся следующими видами работ:
                         <br>
-                        Уборка в квартирах, отдельных комнатах;
-                        Уборка в частных домах и на их территориях;
-                        Клининг в офисных помещениях разного типа: кабинеты, свободные пространства, конференц-залы и проч.;
-                        Очищение фасадов зданий от загрязнений всех типов сложностей;
-                        Уборка в помещениях сразу после строительных или ремонтных работ;
-                        Мойка окон всех форм и размеров;
-                        Клининг помещений, которые претерпели пожар или затопление;
-                        Очистка плитки, мрамора, паркета;
-                        Осуществление очистки ковра и других тканей, используя специализированные химические средства;
-                        Выполнение уборки на высоте;
-                        Очищение воздуха.
+                    
+                        <ul style="text-align: left; font-size: 23px">
+                            <li>Уборка в квартирах, отдельных комнатах;</li>
+                            <li>Уборка в частных домах и на их территориях;</li>
+                            <li>Клининг в офисных помещениях разного типа: кабинеты, свободные пространства, конференц-залы и проч.;</li>
+                            <li>Очищение фасадов зданий от загрязнений всех типов сложностей;</li>
+                            <li>Уборка в помещениях сразу после строительных или ремонтных работ;</li>
+                            <li>Мойка окон всех форм и размеров;</li>
+                            <li>Клининг помещений, которые претерпели пожар или затопление;</li>
+                            <li>Очистка плитки, мрамора, паркета;</li>
+                            <li>Осуществление очистки ковра и других тканей, используя специализированные химические средства;</li>
+                            <li>Выполнение уборки на высоте;</li>
+                            <li>Очищение воздуха.</li>
+                        </ul>
+
                         <div style="font-size: 24px; padding-left: 28px; padding-top: 28px; color:white">
 
                     </div>
@@ -264,8 +267,8 @@
                 </div>
             </div>
 
-                <!--Панель доп инфы-->
-                <div class= "AboutInfoPanel PanelsBorderStyle MainPanelsWidth">
+            <!--Панель доп инфы-->
+            <div class= "AboutInfoPanel PanelsBorderStyle MainPanelsWidth">
                     
                     <?php echo "Hello there!"; ?>
 
@@ -326,8 +329,8 @@
         <div class="OrderPanelBackground" id="orderPanelBackground" onclick="HideOrderPanel();">
 
         </div>
-        <!-- Панель заказа -->
-        <div class="OrderPanel SecondaryColorBG PanelsBorderStyle PanelsShadow" id="orderPanel">
+        <!-- Панель заказа PanelsShadow-->
+        <div class="OrderPanel SecondaryColorBG PanelsBorderStyle " id="orderPanel">
             <div class="OrderConentContainer">
                 <div class="OrderPanelImageContainer">
                     <div class="OrderPanelImage">
@@ -345,21 +348,29 @@
                     <br>
                     Как к вам обращаться?
                     <br>
-                    Имя:*
+                    Имя:<span class="UpperRedStar"><sup>*</sup></span>
                     <br>
-                    <input name="nameInput" autocomplete="off"/>
+                    <input name="nameInput" autocomplete="off" maxlength="25"/>
                     <br>
                     Фамилия:
                     <br>
-                    <input name="secondNameInput" autocomplete="off"/>
+                    <input name="secondNameInput" autocomplete="off" maxlength="25"/>
                     <br>
                     Отчество:
                     <br>
-                    <input name="lastNameInput" autocomplete="off"/>
+                    <input name="lastNameInput" autocomplete="off" maxlength="25"/>
                     <br>
-                    Телефон:*
+                    Телефон:<span class="UpperRedStar"><sup>*</sup></span>
                     <br>
-                    <input name="phoneInput" autocomplete="off"/>
+                    <input name="phoneInput" autocomplete="off" />
+                    <br>
+                    Адрес:
+                    <br>
+                    <input name="adressInput" autocomplete="off" maxlength="70"/>
+                    <br>
+                    Комментарий к заказу:
+                    <br>
+                    <input name="commentaryInput" autocomplete="off" maxlength="256"/>
                     <br>
 
                     <input name="submitOrderButton" id="OrderButton" type="button" value="Заказать!"/>
